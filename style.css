@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500;600;700&display=swap');
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: poppins, sans-serif;
+}
+
+:root {
+	--primary-color: black;
+	--secondary-color: #6b6b6bb2;
+	--light-color: #eee;
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+/* .container2 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 700px;
+	border: 0.2rem solid green;
+} */
+
+.main {
+	border: 0.2rem solid var(--primary-color);
+	border-radius: 1.5rem;
+	padding: 1rem;
+}
+
+header {
+	/* background-color: var(--primary-color); */
+	color: var(--primary-color);
+	padding: 1rem;
+	text-align: center;
+	border-radius: 1rem;
+	/* margin-bottom: rem; */
+}
+
+.logs {
+	display: grid;
+	grid-template-columns: 12rem auto auto;
+	width: 100%;
+	padding: 1.5rem 5rem;
+	position: relative;
+}
+
+.left {
+	text-align: right;
+}
+
+.date {
+	padding-right: 2rem;
+}
+
+.center {
+	display: flex;
+	flex-direction: column;
+	/* padding-right: 0.1rem; */
+}
+
+.date,
+.bi,
+.task {
+	padding: 1rem;
+}
+
+.bi {
+	/* color: red; */
+	padding-right: 1rem;
+}
+
+.task {
+	padding-right: 2rem;
+}
+
+.date {
+	font-size: 0.9rem;
+}
+
+.task-item {
+	font-size: 0.9rem;
+}
+
+/* 
+.line {
+	border: 0.1rem solid var(--primary-color);
+	height: 25rem;
+	width: 0.1rem;
+	position: relative;
+	left: 13.5rem;
+	bottom: 23rem;
+	margin-bottom: -25rem;
+} */
+
+.line {
+	border: 0.1rem solid var(--primary-color);
+	width: 0.1rem;
+	position: absolute;
+	left: 18.5rem;
+	top: 52%;
+	transform: translateY(-50%);
+	height: 35vh;
+}
+
+@media (max-width: 768px) {
+	.line {
+		height: 35vh;
+		left: 14.5rem;
+		top: 45%;
+		/* reduce the height for smaller screens */
+	}
+	.logs {
+		padding: 0.8rem;
+	}
+}
